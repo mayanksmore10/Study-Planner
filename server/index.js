@@ -9,7 +9,12 @@ const scheduleRoutes = require('./routes/schedule');
 
 const app = express();
 
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({
+    origin: [
+        'http://localhost:3000',
+        'https://study-planner-v84h.onrender.com'
+    ]
+}));
 app.use(express.json());
 
 app.use('/api/tasks', taskRoutes);

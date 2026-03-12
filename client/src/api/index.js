@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const api = axios.create({ baseURL: '/api' });
+const api = axios.create({ baseURL: 'https://study-planner-v84h.onrender.com/api' });
 
 // TASKS
 export const getTasks = () => api.get('/tasks');
